@@ -1,0 +1,28 @@
+<div class="card m-2 " style="width: 18rem;">
+    @if (projectImageUrl) {
+        <img class="card-img-top" 
+        src="{{projectImageUrl}}" 
+        alt="Card image cap"
+        style="width: 100%; height: auto; max-height: 18rem;">
+    }
+    
+    <div class="card-body">
+    <h5 class="card-title">{{projectName}}</h5>
+    <p class="card-text">{{projectDescription}}</p>
+    @if (projectRoute) {
+        <a
+        class="btn btn-outline-primary"
+        routerLink="{{projectRoute}}"
+        routerLinkActive="active"
+        areaCurrentWhenActive="page"
+        >visit project</a>
+    } @else {
+        <a
+        class="btn btn-outline-primary"
+        href="{{projectLink}}"
+        target="_blank"
+        >visit project</a>
+    }
+      
+    </div>
+</div>
